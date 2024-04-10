@@ -1,0 +1,33 @@
+.formeHeader{
+    height: 90px;
+    width: 1200px;
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.formeNav{
+    min-height: 100vh;
+    height: auto;
+    width: 20%;
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body, nav, header, h1{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+section{
+    min-height: 90px;
+    height: 100px;
+}
+
+.paginaMenu{
+    display: flex;
+    flex-direction: row;
+}
+
+
