@@ -10,7 +10,7 @@ function AxiosTeste() {
 
         const response = await axios.get("http://localhost:8010/coffebrew/produto/lista");
         setProdutos(response.data);
-       // console.log(response)
+       console.log(response)
       } catch (error) {
         console.error("Erro ao buscar dados:", error);
       }

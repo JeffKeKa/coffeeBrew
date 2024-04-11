@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './color.css'
 import './forme.css'
 import './letter.css'
-import './cardMenu'
+import CardProduto from './card/cardProduto.jsx'
 
 function CoffeeBrewMenu() {
   const [count, setCount] = useState(0)
@@ -24,8 +24,8 @@ function CoffeeBrewMenu() {
       <h1>CAFÉ</h1>
     </header>
     <section>
+      <CardProduto/>
       <h1>ola</h1>
-      {/* <CardMenu/> */}
     </section>
 
     </div>
