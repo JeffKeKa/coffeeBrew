@@ -3,6 +3,7 @@ import './color.css'
 import './forme.css'
 import './letter.css'
 import CardProduto from './card/cardProduto.jsx'
+import NaviBarMenu from './naviBarMenu/NaviBarMenu.jsx'
 
 function CoffeeBrewMenu() {
   const [count, setCount] = useState(0)
@@ -19,10 +20,10 @@ function CoffeeBrewMenu() {
     </nav>
 
     <div>
-
-    <header className='colorCafe formeHeader'>
-      <h1>CAFÉ</h1>
-    </header>
+    <section>
+      <NaviBarMenu/>
+      <h1>ola</h1>
+    </section>
     <section>
       <CardProduto/>
       <h1>ola</h1>
