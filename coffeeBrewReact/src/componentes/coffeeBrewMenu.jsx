@@ -3,6 +3,8 @@ import './color.css'
 import './forme.css'
 import './letter.css'
 import CardProduto from './card/cardProduto.jsx'
+import MenuLateral from './menuLateral/menuLateral.jsx'
+
 
 function CoffeeBrewMenu() {
   const [count, setCount] = useState(0)
@@ -10,23 +12,28 @@ function CoffeeBrewMenu() {
   return (
     <div className='paginaMenu'>
 
-    <nav className='colorCafeAmargo formeNav'>
-      <h1 className=''>Logo</h1><br/><br/><br/>
-      <h1 className=''>CAFÉ</h1><br/><br/>
-      <h1 className=''>BEBIDAS</h1><br/><br/>
-      <h1 className=''>SALGADOS</h1><br/><br/>
-      <h1 className=''>DOCES</h1><br/><br/>
-    </nav>
+    <MenuLateral/>
 
     <div>
 
     <header className='colorCafe formeHeader'>
       <h1>CAFÉ</h1>
     </header>
+    <div className='menuCentral'>
+      <section >
+      <CardProduto/>
+      <CardProduto/>
+     
+    
+    </section>
     <section>
       <CardProduto/>
-      <h1>ola</h1>
+      <CardProduto/>
+      
+      
     </section>
+
+    </div>
 
     </div>
     
