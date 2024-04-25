@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 .formeHeader{
     height: 8%;
     width: 100%;
+=======
+.formeHeader, .infoBarNavi{
+    height: 90px;
+    width: 1200px;
+>>>>>>> 3fd4841c6cb577b18275f2f53a9155513d35cbc9
 
     margin: 0;
     border: 0;
