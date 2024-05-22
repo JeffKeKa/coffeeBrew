@@ -1,15 +1,14 @@
-import React from 'react'
-
+import React from "react";
+import "./style.css";
+import { Link } from "react-router-dom";
 function NaviBarMenu() {
   return (
-    <div>
-        <header className='colorCafe formeHeader'>
-            <h1>CAFÉ</h1>
-            <img src="./imagensIcons/Search.svg" alt="" />
-            <img src="./imagensIcons/ShoppingCart.svg" alt="" />
-        </header>
+    <div className="nav ">
+      
+      <img src="./imagensIcons/ShoppingCart.svg" alt="" className="cart" />
+      
     </div>
-  )
+  );
 }
 
-export default NaviBarMenu
+export default NaviBarMenu;

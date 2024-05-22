@@ -9,47 +9,47 @@ import { Inicio } from "../pages/Inicio";
 import { Cadastrocliente } from "../pages/Cadastrocliente";
 import { Wrapper } from "../componentes/Wrapper";
 
-export const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route
-        path="/"
-        element={
-          <Wrapper>
-           
-            <Menu></Menu>
-            </Wrapper>
-        }
-      />
+  export const router = createBrowserRouter(
+    createRoutesFromElements(
+      <>
+        <Route
+          path="/"
+          element={
+            <Wrapper>
+            
+              <Menu></Menu>
+              </Wrapper>
+          }
+        />
 
-      <Route
-        path="/Inicio"
-        element={
-          <Wrapper>
-            <Inicio></Inicio>
-            </Wrapper>
-        }
-      />
+        <Route
+          path="/Inicio"
+          element={
+            <Wrapper>
+              <Inicio></Inicio>
+              </Wrapper>
+          }
+        />
 
-      <Route
-        path="/menu"
-        element={
-          <Wrapper>
-            <Menu></Menu>
-            </Wrapper>
-        }
-      />
+        <Route
+          path="/menu"
+          element={
+            <Wrapper>
+              <Menu></Menu>
+              </Wrapper>
+          }
+        />
 
-      <Route
-        path="/cadastrocliente"
-        element={
-         
-          <Wrapper>
-          <Cadastrocliente></Cadastrocliente>
-          </Wrapper>  
-        
-        }
-      />
-    </>
-  )
-);
+        <Route
+          path="/cadastrocliente"
+          element={
+          
+            <Wrapper>
+            <Cadastrocliente></Cadastrocliente>
+            </Wrapper>  
+          
+          }
+        />
+      </>
+    )
+  );

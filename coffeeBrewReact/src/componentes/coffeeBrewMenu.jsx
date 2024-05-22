@@ -1,31 +1,34 @@
 import { useState } from "react";
 import "./color.css";
-import "./forme.css";
 import "./letter.css";
-import CardProduto from "./card/cardProduto.jsx";
 import MenuLateral from "./menuLateral/menuLateral.jsx";
+import Footer from "./footer/footer.jsx";
 
 import NaviBarMenu from "./naviBarMenu/NaviBarMenu.jsx";
+import MenuCafe from "./menu/MenuCafe.jsx";
 
 function CoffeeBrewMenu() {
   const [count, setCount] = useState(0);
 
   return (
+    <div>
     <div className="paginaMenu">
+
       <MenuLateral />
-     
       <div>
-      <NaviBarMenu />
-        <header className="colorCafe formeHeader"></header>
+        <NaviBarMenu />
+     
         <div className="menuCentral">
-          <section>
-            <CardProduto />
-            <CardProduto />
-          </section>
+          <MenuCafe/>
+          
         </div>
+        
+        
       </div>
     </div>
-  );
+    <Footer/>
+    </div>
+        );
 }
 
 export default CoffeeBrewMenu;
