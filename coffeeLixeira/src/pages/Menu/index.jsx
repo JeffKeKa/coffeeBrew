@@ -10,9 +10,9 @@ export const Menu = () => {
        
       
 
-        <Carrosel></Carrosel>
+        
 
-        <Div></Div>
+      
         
         <div className="flex justify-center w-full">
         <Divdois></Divdois>

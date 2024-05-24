@@ -1,29 +1,69 @@
-import { MelhoresProdutos } from "../../utils/constants/melhoresprodutos";
-
-export const Div = () => {
+import React from "react";
+import { Link } from "react-router-dom";
+import {  ChevronUpIcon } from "@heroicons/react/24/solid";
+import {
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@material-tailwind/react";
+ 
+export function Div() {
+  const [openMenu, setOpenMenu] = React.useState(false);
+ 
   return (
-    <> 
-      <div className=" ">
-        <div className="flex flex itens-center justify-center w-full px-5 p-10 sm:flex-col md:flex-row gap-x-4">
-          {MelhoresProdutos.map((produto) => (
-            <div  key = {produto.id} className="w-full  bg-brown-700 border border-brown-900 rounded-lg shadow dark:bg-gray-800 dark:border-white   ">
-              
-              <div className="flex flex-col items-center pb-1 pr-3   hover:bg-brown-300 duration-200 ">
-                <img
-                  className="w-30 h-30 mb-3 rounded-full shadow-lg"
-                  src={produto.image}
-                />
-                <h5 className="mb-1 text-xl text-white font-medium text-gray-900 dark:text-white ">
-                  {produto.nome}
-                </h5>
-                <span className="text-sm text-white dark:text-gray-400">
-                  {produto.preco}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
+    <Menu>
+      <MenuHandler>
+        <Button> Menu</Button>
+      </MenuHandler>
+      <MenuList>
+                 <Link   
+                  to="/menu"
+                    className="bg-gray-900 text-white hover:bg-gray-700 rounded-md px-3 py-2 text-sm font-medium"
+                    > 
+                  
+                 
+                   Cafes
+                   
+                  </Link>
+                  <br /><br />
+                  <Link   
+                  to="/inicio"
+                    className="bg-gray-900 text-white hover:bg-gray-700 rounded-md px-3 py-2 text-sm font-medium"
+                    > 
+                  
+                 
+                   Salgados
+                   
+                  </Link>
+                  <br /><br />
+        <Menu
+          placement="right-start"
+          open={openMenu}
+          handler={setOpenMenu}
+          allowHover
+          offset={15}
+        >
+          <MenuHandler className="flex items-center justify-between">
+            <MenuItem>
+              Doces
+              <ChevronUpIcon
+                strokeWidth={2.5}
+                className={`h-3.5 w-3.5 transition-transform ${
+                  openMenu ? "rotate-90" : ""
+                }`}
+              />
+            </MenuItem>
+          </MenuHandler>
+          <MenuList>
+            <MenuItem>Tortas</MenuItem>
+            <MenuItem>Bolos</MenuItem>
+            <MenuItem>Twix</MenuItem>
+          </MenuList>
+        </Menu>
+        <MenuItem>Bebidas</MenuItem>
+      </MenuList>
+    </Menu>
   );
-};
+}
